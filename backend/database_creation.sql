@@ -1,4 +1,9 @@
-CREATE SCHEMA sensors;
+CREATE DATABASE sensors;
+
+USE sensors;
+
+CREATE USER 'aquaponics'@'localhost' IDENTIFIED BY 'somepassword1';
+GRANT ALL PRIVILEGES ON *.* TO 'aquaponics'@'localhost' WITH GRANT OPTION;
 
 CREATE TABLE sensors.sensor (
     id int NOT NULL AUTO_INCREMENT,
